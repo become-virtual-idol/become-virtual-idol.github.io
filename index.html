@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080414" />
+  <title>NIPS Event Flow — AI K‑Pop Experience</title>
+  <meta name="description" content="An immersive, scroll-animated event microsite inspired by neon AI / K-pop stage visuals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-dot"></span>
+      NIPS // AI K‑POP
+    </a>
+    <nav>
+      <a href="#flow">Flow</a>
+      <a href="#studio">Studio</a>
+      <a href="#share">Live</a>
+    </nav>
+    <a class="header-cta" href="#flow">Enter experience</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">NIPS EVENT FLOW · SEOUL × MELBOURNE</p>
+        <h1 class="hero-title">
+          <span class="reveal">Step into the</span>
+          <span class="gradient-text reveal">AI K‑Pop Stage.</span>
+        </h1>
+        <p class="hero-sub reveal">An immersive event journey where participants move from photo time to keynote talks, then become part of a live AI-powered performance.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#flow">Explore the flow</a>
+          <button class="btn btn-ghost" id="motionToggle" type="button">Pause motion</button>
+        </div>
+        <div class="hero-stats reveal">
+          <div><strong>03</strong><span>main acts</span></div>
+          <div><strong>07</strong><span>AI steps</span></div>
+          <div><strong>∞</strong><span>custom styles</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="hero-card floating-card tilt-card">
+          <div class="screen-grid"></div>
+          <div class="mini-label">LIVE GENERATION</div>
+          <div class="performer">
+            <div class="head"></div>
+            <div class="torso"></div>
+            <div class="leg l"></div>
+            <div class="leg r"></div>
+            <div class="arm l"></div>
+            <div class="arm r"></div>
+          </div>
+          <div class="stage-ring"></div>
+          <div class="hero-card-footer"><span>AI K‑POP STUDIO</span><b>REC ●</b></div>
+        </div>
+        <div class="floating-tag tag-a">VOICE → MOTION</div>
+        <div class="floating-tag tag-b">MULTI-VIEW</div>
+        <div class="floating-tag tag-c">LIVE SHARE</div>
+      </div>
+    </section>
+
+    <section id="flow" class="section-shell flow-section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">01 · EVENT JOURNEY</p>
+          <h2>One continuous experience,<br><span class="gradient-text">built to move.</span></h2>
+        </div>
+        <p>Each act enters with a float-in reveal and rotates subtly as the page scrolls. Hover or tap the cards to feel the depth.</p>
+      </div>
+
+      <div class="flow-grid">
+        <article class="feature-card reveal tilt-card" data-rotate="-5">
+          <div class="card-number">01</div>
+          <div class="card-icon">✦</div>
+          <h3>Intro & Photo Time</h3>
+          <p>Welcome, event introduction, photo booth moments and social sharing.</p>
+          <div class="chip-row"><span>#NIPS</span><span>#PHOTO</span></div>
+        </article>
+
+        <article class="feature-card reveal tilt-card" data-rotate="4">
+          <div class="card-number">02</div>
+          <div class="card-icon">◉</div>
+          <h3>Keynote Speeches</h3>
+          <p>Korean and Australian speakers connect AI, culture and creative technology.</p>
+          <div class="speaker-strip"><span>KR</span><i></i><span>AU</span></div>
+        </article>
+
+        <article class="feature-card reveal tilt-card feature-card-wide" data-rotate="-3">
+          <div class="card-number">03</div>
+          <div class="card-icon">✧</div>
+          <h3>Interactive AI K‑Pop Experience</h3>
+          <p>Record a short voice clip, capture multi-view photos, choose styling, then watch your AI performer appear on stage.</p>
+          <div class="mini-flow">
+            <span>LINE UP</span><b>→</b><span>VOICE</span><b>→</b><span>PHOTO</span><b>→</b><span>STYLE</span><b>→</b><span>AI</span><b>→</b><span>STAGE</span><b>→</b><span>QR</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="studio" class="studio-section">
+      <div class="section-shell studio-shell">
+        <div class="sticky-copy">
+          <p class="eyebrow reveal">02 · INTERACTION & CUSTOMIZATION</p>
+          <h2 class="reveal">Design your<br><span class="gradient-text">stage identity.</span></h2>
+          <p class="reveal">Scroll through four interactive stations. The preview object rotates and floats as each station becomes active.</p>
+          <div class="station-nav reveal">
+            <button class="station-dot active" data-station="0">Hair</button>
+            <button class="station-dot" data-station="1">Makeup</button>
+            <button class="station-dot" data-station="2">Outfit</button>
+            <button class="station-dot" data-station="3">Stage</button>
+          </div>
+        </div>
+
+        <div class="studio-preview-wrap">
+          <div class="studio-preview tilt-card" id="studioPreview">
+            <div class="preview-halo"></div>
+            <div class="avatar">
+              <div class="avatar-head"></div>
+              <div class="avatar-body"></div>
+              <div class="avatar-leg one"></div>
+              <div class="avatar-leg two"></div>
+            </div>
+            <div class="preview-caption"><span id="previewLabel">HAIR STYLE</span><b>01 / 04</b></div>
+          </div>
+        </div>
+
+        <div class="station-list">
+          <article class="station-card" data-label="HAIR STYLE">
+            <span>01</span><h3>Hair Style</h3><p>Choose a silhouette, length and highlight treatment.</p>
+            <div class="swatches"><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="station-card" data-label="MAKEUP">
+            <span>02</span><h3>Makeup</h3><p>Select a visual profile from soft glow to high-contrast stage makeup.</p>
+            <div class="face-grid"><i></i><i></i><i></i></div>
+          </article>
+          <article class="station-card" data-label="OUTFIT / STYLING">
+            <span>03</span><h3>Outfit / Styling</h3><p>Pick a wardrobe direction: minimal, glossy, cyber or retro.</p>
+            <div class="outfit-bars"><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="station-card" data-label="BACKGROUND / STAGE">
+            <span>04</span><h3>Background / Stage</h3><p>Drop your performer into a glowing stage generated for the chosen vibe.</p>
+            <div class="stage-grid"><i></i><i></i></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell pipeline-section">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">03 · AI PIPELINE</p><h2>From capture to <span class="gradient-text">performance.</span></h2></div>
+        <p>Animated nodes visualize the transformation path. This section can later be wired to a real live demo or API.</p>
+      </div>
+
+      <div class="pipeline">
+        <div class="pipe-node reveal"><span>01</span><strong>Record</strong><small>3 sec audio</small></div>
+        <div class="pipe-line"><i></i></div>
+        <div class="pipe-node reveal"><span>02</span><strong>Capture</strong><small>multi-view</small></div>
+        <div class="pipe-line"><i></i></div>
+        <div class="pipe-node reveal"><span>03</span><strong>Style</strong><small>look + stage</small></div>
+        <div class="pipe-line"><i></i></div>
+        <div class="pipe-node reveal"><span>04</span><strong>Transform</strong><small>AI synthesis</small></div>
+        <div class="pipe-line"><i></i></div>
+        <div class="pipe-node reveal"><span>05</span><strong>Perform</strong><small>big screen</small></div>
+      </div>
+    </section>
+
+    <section id="share" class="section-shell share-section">
+      <div class="share-card reveal tilt-card">
+        <div class="share-copy">
+          <p class="eyebrow">04 · LIVE VIEWING & SHARING</p>
+          <h2>Your stage moment,<br><span class="gradient-text">instantly shareable.</span></h2>
+          <p>Display the result on a large screen, scan a QR code, and download the final photo or short performance clip.</p>
+          <a class="btn btn-primary" href="#top">Replay the experience ↑</a>
+        </div>
+        <div class="phone-mock">
+          <div class="phone-screen">
+            <div class="qr-grid" aria-hidden="true"></div>
+            <span>SCAN TO DOWNLOAD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="engagement-grid">
+        <article class="engagement-card reveal"><span>🎁</span><h3>SNS Sharing Event</h3><p>Share the result and unlock event rewards.</p></article>
+        <article class="engagement-card reveal"><span>🏆</span><h3>Best Dancer Award</h3><p>Audience voting can be connected to the final stage.</p></article>
+        <article class="engagement-card reveal"><span>★</span><h3>Merch & Rewards</h3><p>Use exclusive digital or physical rewards as the closing moment.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>NIPS // AI K‑POP EXPERIENCE</span>
+    <span>Static GitHub Pages build · HTML / CSS / JS</span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
