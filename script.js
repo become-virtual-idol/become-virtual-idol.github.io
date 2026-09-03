@@ -161,4 +161,3 @@ setTimeout(() => {
 }, 1200);
 
 
-// git clone https://github.com/become-virtual-idol/become-virtual-idol.github.io.git
