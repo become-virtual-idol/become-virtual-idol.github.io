@@ -907,7 +907,7 @@ h2 {
   gap: 10px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 10px 2px 26px;
+  padding: 10px 2px 202px;
   scrollbar-width: none;
 }
 
@@ -916,7 +916,9 @@ h2 {
 }
 
 .pipe-node {
+  position: relative;
   min-width: 160px;
+  width: 160px;
   aspect-ratio: 1;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
@@ -945,6 +947,19 @@ h2 {
   word-break: keep-all;
   overflow-wrap: break-word;
   margin: 0 1em;
+}
+
+.pipe-icon {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(190, 90, 255, .4));
+  pointer-events: none;
 }
 
 .pipe-line {
@@ -1360,10 +1375,16 @@ footer {
 
   .pipeline {
     gap: 8px;
+    padding-bottom: 164px;
   }
 
   .pipe-node {
     min-width: 132px;
+    width: 132px;
+  }
+
+  .pipe-icon {
+    top: calc(100% + 12px);
   }
 
   .pipe-line {
