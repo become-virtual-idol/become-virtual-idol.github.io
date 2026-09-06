@@ -109,12 +109,26 @@ if (!reduceMotion) {
   });
 
   function activateStation(index) {
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    previewLabel.textContent = stationCards[index].dataset.label;
-    gsap.to(preview, { rotateY: (index - 1.5) * 7, rotateZ: index % 2 ? 2.4 : -2.4, duration: .65, ease: 'power3.out' });
-    gsap.fromTo('.avatar', { y: 14, scale: .97 }, { y: 0, scale: 1, duration: .55, ease: 'back.out(1.8)' });
-    document.querySelector('.preview-caption b').textContent = `0${index + 1} / 04`;
-  }
+  dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+  previewLabel.textContent = stationCards[index].dataset.label;
+  gsap.to(preview, { rotateY: (index - 1.5) * 7, rotateZ: index % 2 ? 2.4 : -2.4, duration: .65, ease: 'power3.out' });
+  gsap.fromTo('.avatar', { y: 14, scale: .97 }, { y: 0, scale: 1, duration: .55, ease: 'back.out(1.8)' });
+  document.querySelector('.preview-caption b').textContent = `0${index + 1} / 04`;
+
+  document.querySelectorAll('.bg-media').forEach((el) => {
+    const isActive = Number(el.dataset.station) === index;
+    el.classList.toggle('active', isActive);
+
+    if (el.tagName === 'VIDEO') {
+      if (isActive) {
+        el.currentTime = 0;
+        el.play().catch(() => {});
+      } else {
+        el.pause();
+      }
+    }
+  });
+}
 
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
