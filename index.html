@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -227,38 +228,51 @@
         <p>Meet the people organizing, advising, and building Multimodal AI Studio at NeurIPS 2026.</p>
       </div>
 
+      <div class="organizers-map">
+        <div class="map-panel">
+          <div class="map-heading reveal">
+            <p class="eyebrow">ORGANIZER NETWORK</p>
+            <p class="map-hint">Pins mark organizer cities around the world.</p>
+          </div>
+
+          <div class="map-canvas" aria-label="World map of organizer countries">
+            <div id="organizerMap" role="application"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="organizers-group">
         <h3 class="organizers-group-title reveal">Organizers</h3>
         <div class="organizers-grid reveal">
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Caren Han" loading="lazy">
             </div>
             <h4 class="organizer-name">Caren Han</h4>
             <p class="organizer-affiliation">The University of Melbourne, Australia</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au us">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Eduard Hovy" loading="lazy">
             </div>
             <h4 class="organizer-name">Eduard Hovy</h4>
             <p class="organizer-affiliation">The University of Melbourne, Australia <br> Carnegie Mellon University, USA</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Rina Cabral" loading="lazy">
             </div>
             <h4 class="organizer-name">Rina Cabral</h4>
             <p class="organizer-affiliation">The University of Melbourne, Australia</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Kyungreem Han" loading="lazy">
             </div>
             <h4 class="organizer-name">Kyungreem Han</h4>
             <p class="organizer-affiliation">Korea Institute of Science and Technology (KIST), Republic of Korea</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Sang Wook Yi" loading="lazy">
             </div>
@@ -271,28 +285,28 @@
       <div class="organizers-group">
         <h3 class="organizers-group-title reveal">Advisory Organizers</h3>
         <div class="organizers-grid reveal">
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Josiah Poon" loading="lazy">
             </div>
             <h4 class="organizer-name">Josiah Poon</h4>
             <p class="organizer-affiliation">University of Sydney, Australia</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="cn">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Xiaojun Wan" loading="lazy">
             </div>
             <h4 class="organizer-name">Xiaojun Wan</h4>
             <p class="organizer-affiliation">Peking University, China</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="it">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Roberto Navigli" loading="lazy">
             </div>
             <h4 class="organizer-name">Roberto Navigli</h4>
             <p class="organizer-affiliation">Sapienza University of Rome, Italy</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="it">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Luca Cagliero" loading="lazy">
             </div>
@@ -300,43 +314,43 @@
             <p class="organizer-affiliation">Politecnico di Torino, Italy</p>
           </article>
 
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="uk">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Honghan Wu" loading="lazy">
             </div>
             <h4 class="organizer-name">Honghan Wu</h4>
             <p class="organizer-affiliation">University of Glasgow, United Kingdom</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Seong-Bae Park" loading="lazy">
             </div>
             <h4 class="organizer-name">Seong-Bae Park</h4>
             <p class="organizer-affiliation">Kyunghee University, Republic of Korea</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Minseok Song" loading="lazy">
             </div>
             <h4 class="organizer-name">Minseok Song</h4>
             <p class="organizer-affiliation">Pohang University of Science and Technology (Postech), Republic of Korea</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="rw">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Prasenjit Mitra" loading="lazy">
             </div>
             <h4 class="organizer-name">Prasenjit Mitra</h4>
-            <p class="organizer-affiliation">Carnegie Mellon University, Africa</p>
+            <p class="organizer-affiliation">Carnegie Mellon University, Rwanda</p>
           </article>
 
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="jp">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Takayuki Ito" loading="lazy">
             </div>
             <h4 class="organizer-name">Takayuki Ito</h4>
             <p class="organizer-affiliation">Kyoto University, Japan</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Christopher Leckie" loading="lazy">
             </div>
@@ -356,28 +370,28 @@
       <div class="organizers-group">
         <h3 class="organizers-group-title reveal">Technical Organizers</h3>
         <div class="organizers-grid reveal">
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="David Chung" loading="lazy">
             </div>
             <h4 class="organizer-name">David Chung</h4>
             <p class="organizer-affiliation">The University of Melbourne, Australia</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Sehyuk Park" loading="lazy">
             </div>
             <h4 class="organizer-name">Sehyuk Park</h4>
             <p class="organizer-affiliation">The University of Melbourne, Australia</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="au">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Jinwoo Kim" loading="lazy">
             </div>
             <h4 class="organizer-name">Jinwoo Kim</h4>
             <p class="organizer-affiliation">The University of Melbourne, Australia</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Sangeun Lee" loading="lazy">
             </div>
@@ -385,14 +399,14 @@
             <p class="organizer-affiliation">Korea Institute of Science and Technology (KIST), Republic of Korea</p>
           </article>
 
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Seungyeon Ji" loading="lazy">
             </div>
             <h4 class="organizer-name">Seungyeon Ji</h4>
             <p class="organizer-affiliation">Korea Institute of Science and Technology (KIST), Republic of Korea</p>
           </article>
-          <article class="organizer-card tilt-card">
+          <article class="organizer-card tilt-card" data-country="kr">
             <div class="organizer-photo">
               <img src="assets/organizer_placeholder.png" alt="Chaehee Kim" loading="lazy">
             </div>
@@ -421,6 +435,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
