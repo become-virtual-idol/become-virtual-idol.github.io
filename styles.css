@@ -1297,12 +1297,37 @@ footer {
   background: linear-gradient(160deg, #2b1743, #150a24);
 }
 
+.organizer-photo {
+  position: relative;
+}
+
 .organizer-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center top;
   display: block;
+}
+
+/* Photos where the face is small in the frame: zoom in on the face */
+.organizer-photo.photo-zoom img {
+  transform: scale(1.45);
+  transform-origin: 50% 42%;
+}
+
+/* Tightly cropped face photos: show the whole photo, fill the sides with a blurred copy */
+.organizer-photo.photo-fit::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  background: var(--photo) center / cover no-repeat;
+  filter: blur(8px);
+}
+
+.organizer-photo.photo-fit img {
+  position: relative;
+  object-fit: contain;
+  object-position: center;
 }
 
 .organizer-name {

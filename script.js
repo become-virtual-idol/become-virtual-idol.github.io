@@ -186,7 +186,6 @@ setTimeout(() => {
     { country: 'us', count: 1, name: 'United States', place: 'Pittsburgh', lat: 40.4406, lng: -79.9959, align: '' },
     { country: 'cn', count: 1, name: 'China', place: 'Beijing', lat: 39.9042, lng: 116.4074, align: 'is-label-left' },
     { country: 'uk', count: 2, name: 'United Kingdom', place: 'Glasgow', lat: 55.8642, lng: -4.2518, align: '' },
-    { country: 'jp', count: 1, name: 'Japan', place: 'Kyoto', lat: 35.0116, lng: 135.7681, align: 'is-label-right' },
     { country: 'rw', count: 1, name: 'Rwanda', place: 'Kigali', lat: -1.9441, lng: 30.0619, align: '' }
   ];
 
